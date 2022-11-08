@@ -51,7 +51,7 @@ There's also a CLngLng function:
 ```
 `Public Declare Function CLngLng Lib "LngLngHelp.dll" Alias "CLongLong" (ByVal Value As Variant) As Currency`
 
-The error codes you see being set can be retrieved with [tt]LongLongLastError[/tt].
+The error codes you see being set can be retrieved with `LongLongLastError`.
 
 Here's a complete set of declares for the DLL:
 ```
