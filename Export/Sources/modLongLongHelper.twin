@@ -1,0 +1,158 @@
+
+Module LongLongHelper
+'LongLong Helper for VB6 v1.0
+'By fafalone
+
+
+    Option Explicit
+    Private hErr As Long
+    Private Const S_OK = 0
+    
+    [ DllExport ]
+    Public Function LongLongAnd(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongAnd = (c1 And c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongOr(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongOr = (c1 Or c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongXOr(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongXOr = (c1 Xor c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongNot(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongNot = (c1 Not c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongAdd(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongAdd = (c1 + c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongSub(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongSub = (c1 - c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongMul(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongMul = (c1 * c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongDiv(ByVal c1 As LongLong, ByVal c2 As LongLong) As LongLong
+        On Error GoTo fail
+        LongLongDiv = (c1 / c2)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+
+    [ DllExport ]
+    Public Sub LongLongInc(ByRef c1 As LongLong, Optional ByVal Amount As Long = 1)
+        On Error GoTo fail
+        c1 = c1 + Amount
+        hErr = S_OK
+        Exit Sub
+    fail:
+        hErr = Err.Number
+    End Sub
+    
+    [ DllExport ]
+    Public Sub LongLongDec(ByRef c1 As LongLong, Optional ByVal Amount As Long = 1)
+        On Error GoTo fail
+        c1 = (c1 - Amount)
+        hErr = S_OK
+        Exit Sub
+    fail:
+        hErr = Err.Number
+    End Sub
+    
+    [ DllExport ]
+    Public Function LongLongPow(ByVal c1 As LongLong, ByVal pow As Long) As LongLong
+        On Error GoTo fail
+        LongLongPow = (c1 ^ pow)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function LongLongLShift(ByVal c1 As LongLong, ByVal by As Byte) As LongLong
+        On Error GoTo fail
+        LongLongLShift = (c1 << by)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+
+    [ DllExport ]
+    Public Function LongLongRShift(ByVal c1 As LongLong, ByVal by As Byte) As LongLong
+        On Error GoTo fail
+        LongLongRShift = (c1 >> by)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    [ DllExport ]
+    Public Function CLongLong(ByVal Value As Variant) As LongLong
+        On Error GoTo fail
+        CLongLong = CLngLng(Value)
+        hErr = S_OK
+        Exit Function
+    fail:
+        hErr = Err.Number
+    End Function
+    
+    
+    [ DllExport ]
+    Public Function LongLongLastError() As Long
+        Return hErr
+    End Function
+    
+    
+End Module

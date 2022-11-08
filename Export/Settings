@@ -1,0 +1,34 @@
+{
+	"configuration.inherits": "Defaults",
+	"project.appTitle": "LongLongHelper",
+	"project.buildPath": "${SourcePath}\\Build\\LngLngHelp.${FileExtension}",
+	"project.buildType": "Standard DLL",
+	"project.description": "LongLongHelper for VB6",
+	"project.exportPathIsV2": true,
+	"project.id": "{DEC8BB0E-AE8A-4811-93AA-DD9016473AEC}",
+	"project.name": "LongLongHelper",
+	"project.optionExplicit": true,
+	"project.references": [
+		{
+			"id": "{00020430-0000-0000-C000-000000000046}",
+			"lcid": 0,
+			"name": "OLE Automation",
+			"path32": "C:\\Windows\\SysWOW64\\stdole2.tlb",
+			"path64": "C:\\Windows\\System32\\stdole2.tlb",
+			"versionMajor": 2,
+			"versionMinor": 0
+		}
+	],
+	"project.versionAutoIncrement": "Build",
+	"project.versionBuild": 5,
+	"project.versionFileDescription": "LongLong Helper for VB6",
+	"project.versionLegalCopyright": "(c) 2022 fafalone",
+	"project.versionMajor": 1,
+	"project.versionMinor": 0,
+	"project.versionProductName": "LongLongHelper",
+	"project.warnings": {
+		"errors": [],
+		"ignored": []
+	},
+	"runtime.useUnicodeStandardLibrary": true
+,"project.versionRevision":0}
